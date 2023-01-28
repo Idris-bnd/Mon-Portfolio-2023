@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
 
@@ -6,7 +7,13 @@ function App() {
 
   return(
     <section className='App'>
-       Hello mon portfolio
+        <BrowserRouter>
+            <Routes>
+
+               <Route path="/" element={<Home />} />
+
+            </Routes>
+       </BrowserRouter>
     </section>
  )
 }
