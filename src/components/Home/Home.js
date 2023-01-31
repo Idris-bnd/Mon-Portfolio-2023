@@ -6,7 +6,7 @@ function Home() {
 
   return(
     <section className='Home'>
-       Home
+      Home
     </section>
  )
 }
