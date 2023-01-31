@@ -1,3 +1,36 @@
 .App{
-    
+    cursor: none;
+    &.mouseDown{
+        .cursor{
+            height: 10px;
+            width: 10px;
+        }
+    }
+    .cursor{
+        position: fixed;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none;
+        left: -100px;
+        top: 50%;
+        mix-blend-mode: difference;
+        background-color: #fff;
+        z-index: 10000;
+        height: 20px;
+        width: 20px;
+        transition: height .5s, width .5s;
+        // transition: height .3s, width .1s;
+        
+        &.text{
+            height: 30px;
+            width: 30px;
+        }
+
+        &.transition{
+            height: 500vh;
+            width: 500vw;
+            mix-blend-mode: normal;
+            background-color: #090d18;
+        }
+    }
 }

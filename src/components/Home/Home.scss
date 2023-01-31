@@ -1,3 +1,64 @@
 .Home{
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        margin-top: 2rem;
+        font-size: 5rem;
+        color: #557c70;
+    }
+
+    h2{
+        font-size: 3rem;
+        color: #557c70;
+        width: 23rem;
+        span{
+            transition: opacity .2s;
+            &.remove{
+                opacity: 0;
+            }
+        }
+    }
+
+    .buttonDiv{
+        border: 1px solid #557c70;
+        margin-top: 10rem;
+        padding: 10px 10px;
+        button{
+            padding: 1rem 3rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: none;
+            overflow-y: hidden;
+            position: relative;
+            z-index: 100;
+            color: #557c70;
+            font-size: 1rem;
+            &::before{
+                position: absolute;
+                display: block;
+                content : "More";
+                background-color: #557c70;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                color: #fff;
+                transition: all .25s;
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                z-index: 0;
+            }
+        }
+        &:hover button::before{
+            height: 100%;
+            opacity: 1;
+        }
+
+    }
 }
