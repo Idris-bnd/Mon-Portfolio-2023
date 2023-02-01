@@ -2,7 +2,7 @@
 //     SET_NAV
 // } from "../actions/action";
 
-import { CHANGE_JOB, CHANGE_MOUSE_POSITION, CLOSE_TRANSITION, MOUSE_DOWN, MOUSE_IN_TEXT, MOUSE_OUT_TEXT, MOUSE_UP, SET_FIRST_JOB, SET_TRANSITION } from "../actions/action";
+import { CHANGE_JOB, CHANGE_MOUSE_POSITION, CLOSE_TRANSITION, MOUSE_DOWN, MOUSE_IN_BUTTON, MOUSE_IN_TEXT, MOUSE_OUT_BUTTON, MOUSE_OUT_TEXT, MOUSE_UP, MOUSE_URL, SET_FIRST_JOB, SET_TRANSITION } from "../actions/action";
 
 export const initialState = {
   app: {
@@ -11,6 +11,8 @@ export const initialState = {
       positionY: '',
       onText: false,
       onMouseDown: false,
+      onButton: false,
+      url: "",
     },
     transition: true,
   },
@@ -100,6 +102,28 @@ const reducer = (state = initialState, action = {}) => {
           } 
         }
       };
+      case MOUSE_IN_BUTTON:
+      return{
+        ...state,
+        app: {
+          ...state.app,
+          mouse: {
+            ...state.app.mouse,
+            onButton: true,
+          } 
+        }
+      };
+      case MOUSE_OUT_BUTTON:
+      return{
+        ...state,
+        app: {
+          ...state.app,
+          mouse: {
+            ...state.app.mouse,
+            onButton: false,
+          } 
+        }
+      };
       case MOUSE_DOWN:
       return{
         ...state,
@@ -138,6 +162,17 @@ const reducer = (state = initialState, action = {}) => {
           transition: false,
         }
       };
+      case MOUSE_URL:
+        return{
+          ...state,
+          app: {
+            ...state.app,
+            mouse: {
+              ...state.app.mouse,
+              url: action.url
+            },
+          }
+        };
     default:
       return state;
   }

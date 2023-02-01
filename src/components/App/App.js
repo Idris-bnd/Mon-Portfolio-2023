@@ -11,8 +11,10 @@ function App() {
     const X = useSelector((state) =>  state.portfolio.app.mouse.positionX)
     const Y = useSelector((state) =>  state.portfolio.app.mouse.positionY)
     const onText = useSelector((state) =>  state.portfolio.app.mouse.onText)
+    const onButton = useSelector((state) =>  state.portfolio.app.mouse.onButton)
     const onMouseDown = useSelector((state) =>  state.portfolio.app.mouse.onMouseDown)
     const transition = useSelector((state) =>  state.portfolio.app.transition)
+    const mouseUrl = useSelector((state) =>  state.portfolio.app.mouse.url)
     useEffect(() => {
         setTimeout(() => {
             dispatch(closeTransition());
@@ -30,7 +32,7 @@ function App() {
 
   return(
     <section onMouseDown={mouseDown} onMouseUp={mouseUp}  onMouseMove={mouseMove} className={`App ${onMouseDown && ' mouseDown'}`}>
-        <div style={{ top: X, left: Y}} id='cursor' className={`cursor  ${transition && ' transition'} ${ onText && " text"}`} />
+        <div style={{ top: X, left: Y}} id='cursor' className={`cursor ${mouseUrl} ${ onButton && " button "} ${transition && ' transition '} ${ onText && " text "}`} />
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />

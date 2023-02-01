@@ -1,5 +1,6 @@
 .App{
     cursor: none;
+    min-height: 100vh;
     &.mouseDown{
         .cursor{
             height: 10px;
@@ -18,12 +19,20 @@
         z-index: 10000;
         height: 20px;
         width: 20px;
-        // transition: height .7s, width .7s;
         transition: height .3s, width .1s;
         
         &.text{
             height: 30px;
             width: 30px;
+        }
+
+        &.button{
+            height: 0;
+            width: 0;
+        }
+
+        &.about{
+            background-color: rgb(26, 190, 176);
         }
 
         &.transition{

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { changeJob, closeTransition, mouseInText, mouseOutText, setFirstJob, setTransition } from '../../actions/action';
+import { changeJob, closeTransition, mouseInButton, mouseInText, mouseOutButton, mouseOutText, mouseURL, setFirstJob, setTransition } from '../../actions/action';
 import './Home.scss';
 
 
@@ -10,9 +10,9 @@ function Home() {
   const navigate = useNavigate();
   const devTypes = useSelector((state) => state.portfolio.home.devTypes)
   const devType = useSelector((state) => state.portfolio.home.devType.value)
-  
   useEffect(() => {
-    dispatch(setFirstJob())
+    dispatch(setFirstJob());
+    dispatch(mouseURL(window.location.pathname.substring(1)));
     setInterval(() => {
       document.querySelector('.Home h2 span').className = 'remove';
       setTimeout(() => {
@@ -22,18 +22,25 @@ function Home() {
         }, 200)
       }, 200)
     }, 2700)
-  }, [devTypes])
+  }, [devTypes]);
   const mouseOver = () => {
     dispatch(mouseInText())
   };
   const mouseOut = () => {
     dispatch(mouseOutText())
   };
+  const mouseOverButton = () => {
+    dispatch(mouseInButton());
+  };
+  const mouseOutButtonn = () => {
+      dispatch(mouseOutButton());
+  };
   const changeLocation = () => {
     dispatch(setTransition());
     setTimeout(() => {
-      navigate('/projects')
+      navigate('/about')
       setTimeout(() => {
+        mouseOutButtonn();
         dispatch(closeTransition());
       }, 500)
     }, 500)
@@ -44,7 +51,7 @@ function Home() {
 
       <h2 onMouseOver={mouseOver} onMouseOut={mouseOut}>Développeur <span className=''>{devType}</span></h2>
 
-      <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="buttonDiv">
+      <div onMouseOver={mouseOverButton} onMouseOut={mouseOutButtonn} className="buttonDiv">
         <button onClick={changeLocation}>More</button>
       </div>
     </section>

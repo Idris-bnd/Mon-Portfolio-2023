@@ -37,6 +37,16 @@ export const mouseOutText = () => ({
   type: MOUSE_OUT_TEXT,
 });
 
+export const MOUSE_IN_BUTTON = 'MOUSE_IN_BUTTON';
+export const mouseInButton = () => ({
+  type: MOUSE_IN_BUTTON,
+});
+
+export const MOUSE_OUT_BUTTON = 'MOUSE_OUT_BUTTON';
+export const mouseOutButton = () => ({
+  type: MOUSE_OUT_BUTTON,
+});
+
 export const MOUSE_DOWN = 'MOUSE_DOWN';
 export const mouseDown = () => ({
   type: MOUSE_DOWN,
@@ -45,4 +55,10 @@ export const mouseDown = () => ({
 export const MOUSE_UP = 'MOUSE_UP';
 export const mouseUp = () => ({
   type: MOUSE_UP,
+});
+
+export const MOUSE_URL = 'MOUSE_URL';
+export const mouseURL = (url) => ({
+  type: MOUSE_URL,
+  url: url,
 });
