@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { changeMousePosition, closeTransition } from '../../actions/action';
+import About from '../About/About';
 import Home from '../Home/Home';
 import './App.scss';
 
@@ -33,7 +34,7 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<Home />} />
+                <Route path="/about" element={<About />} />
             </Routes>
         </BrowserRouter>
     </section>

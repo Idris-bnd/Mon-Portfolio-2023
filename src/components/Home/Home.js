@@ -32,11 +32,11 @@ function Home() {
   const changeLocation = () => {
     dispatch(setTransition());
     setTimeout(() => {
-      navigate('/about')
+      navigate('/projects')
       setTimeout(() => {
         dispatch(closeTransition());
       }, 500)
-    }, 1000)
+    }, 500)
   }
   return(
     <section className='Home'>
