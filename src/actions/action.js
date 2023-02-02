@@ -47,6 +47,16 @@ export const mouseOutButton = () => ({
   type: MOUSE_OUT_BUTTON,
 });
 
+export const MOUSE_IN_LI = 'MOUSE_IN_LI';
+export const mouseInLi = () => ({
+  type: MOUSE_IN_LI,
+});
+
+export const MOUSE_OUT_LI = 'MOUSE_OUT_LI';
+export const mouseOutLi = () => ({
+  type: MOUSE_OUT_LI,
+});
+
 export const MOUSE_DOWN = 'MOUSE_DOWN';
 export const mouseDown = () => ({
   type: MOUSE_DOWN,
@@ -61,4 +71,26 @@ export const MOUSE_URL = 'MOUSE_URL';
 export const mouseURL = (url) => ({
   type: MOUSE_URL,
   url: url,
+});
+
+export const SET_INTERVAL = 'SET_INTERVAL';
+export const setInterval = (url) => ({
+  type: SET_INTERVAL,
+  url: url,
+});
+
+export const TOGGLE_PROJECTS_BURGER = 'TOGGLE_PROJECTS_BURGER';
+export const ToggleProjectsBurger = () => ({
+  type: TOGGLE_PROJECTS_BURGER,
+});
+
+export const SET_RANDOM_PROJECT = 'SET_RANDOM_PROJECT';
+export const setRandomProject = () => ({
+  type: SET_RANDOM_PROJECT,
+});
+
+export const CHANGE_PROJECT = 'CHANGE_PROJECT';
+export const changeProject = (name) => ({
+  type: CHANGE_PROJECT,
+  name: name,
 });

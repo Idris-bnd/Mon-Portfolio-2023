@@ -10,6 +10,7 @@ function Home() {
   const navigate = useNavigate();
   const devTypes = useSelector((state) => state.portfolio.home.devTypes)
   const devType = useSelector((state) => state.portfolio.home.devType.value)
+  const interval = useSelector((state) => state.portfolio.home.interval)
   useEffect(() => {
     dispatch(setFirstJob());
     dispatch(mouseURL(window.location.pathname.substring(1)));

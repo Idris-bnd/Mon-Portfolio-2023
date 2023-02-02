@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { changeMousePosition, closeTransition } from '../../actions/action';
 import About from '../About/About';
 import Home from '../Home/Home';
+import Project from '../Project/Project';
 import './App.scss';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     const Y = useSelector((state) =>  state.portfolio.app.mouse.positionY)
     const onText = useSelector((state) =>  state.portfolio.app.mouse.onText)
     const onButton = useSelector((state) =>  state.portfolio.app.mouse.onButton)
+    const onLi = useSelector((state) =>  state.portfolio.app.mouse.onLi)
     const onMouseDown = useSelector((state) =>  state.portfolio.app.mouse.onMouseDown)
     const transition = useSelector((state) =>  state.portfolio.app.transition)
     const mouseUrl = useSelector((state) =>  state.portfolio.app.mouse.url)
@@ -32,11 +34,12 @@ function App() {
 
   return(
     <section onMouseDown={mouseDown} onMouseUp={mouseUp}  onMouseMove={mouseMove} className={`App ${onMouseDown && ' mouseDown'}`}>
-        <div style={{ top: X, left: Y}} id='cursor' className={`cursor ${mouseUrl} ${ onButton && " button "} ${transition && ' transition '} ${ onText && " text "}`} />
+        <div style={{ top: X, left: Y}} id='cursor' className={`cursor ${mouseUrl} ${ onButton && " button "} ${transition && ' transition '} ${ onText && " text "} ${ onLi && " onLi"}`} />
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Project />} />
             </Routes>
         </BrowserRouter>
     </section>

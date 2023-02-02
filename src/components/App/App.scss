@@ -19,27 +19,35 @@
         z-index: 10000;
         height: 20px;
         width: 20px;
-        transition: height .3s, width .1s;
+        transition: height .3s, width .1s, border-radius .2s;
         
         &.text{
             height: 30px;
             width: 30px;
         }
-
+        &.onLi{
+            height: 15px;
+            width: 15px;
+            border-radius: 0;
+        }
         &.button{
             height: 0;
             width: 0;
         }
-
-        &.about{
-            background-color: rgb(26, 190, 176);
-        }
-
         &.transition{
             height: 500vh;
             width: 500vw;
             mix-blend-mode: normal;
             background-color: #090d18;
         }
+
+        // pages
+        &.about{
+            background-color: rgb(27, 121, 58);
+        }
+        &.projects{
+            background-color: #f6f2e7;
+        }
+
     }
 }

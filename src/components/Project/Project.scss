@@ -1,0 +1,166 @@
+.Project{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f0f0f;
+    position: relative;
+    transition: transform .2s;
+    
+    &.changeProject{
+        animation: changeProject 2s;
+    }
+    h1{
+        margin-top: 1rem;
+        font-size: 5rem;
+        color: #f6f2e7;
+    }
+
+    .paragraphs{
+        margin-top: 1.5rem;
+        color: #f6f2e7;
+        font-family: 'Nixie One', cursive;
+        width: 30rem;
+        font-size: 1.2rem;
+    }
+
+    .ImgLink{
+        margin-top: 3rem;
+        width: 30rem;
+        height: 20rem;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .projectList{
+        ul{
+            color: #f6f2e7;
+            list-style: none;
+            position: fixed;
+            top: 5rem;
+            right: -20rem;
+            font-family: 'Nixie One', cursive;
+            font-size: 1.3rem;
+            transition: right .5s;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            li{
+                width: fit-content;
+
+                &::after{
+                    display: block;
+                    content: "";
+                    height: 1px;
+                    width: 0;
+                    background-color: #f6f2e7;
+                    transition: width .2s;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                &.actualProject::after{
+                    width: 100%;
+                }
+            }
+        }
+        &.open ul{
+            right: 1rem;
+        }
+    };
+    .burgerMenu{
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        height: 1rem;
+        width: 2rem;
+        .line1{
+            position: absolute;
+            transition: all .2s;
+            width: 2rem;
+            height: 0.2rem;
+            background-color: #f6f2e7;
+            top: 0;
+        }
+
+        .line2{
+            position: absolute;
+            transition: all .2s;
+            width: 2rem;
+            height: 0.2rem;
+            background-color: #f6f2e7;
+            top: 80%;
+        }
+
+        &.open{
+            .line1{
+                top: 40%;
+                transform: rotate(45deg);
+            }
+    
+            .line2{
+                top: 40%;
+                transform: rotate(-45deg);
+            }
+        }
+    };
+    .backTo{
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        overflow: hidden;
+        
+        i{
+            z-index: 100;
+            color: #f6f2e7;
+        }
+        &::before{
+            position: absolute;
+            display: block;
+            content : "";
+            background-color: #f6f2e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: all .25s;
+            bottom: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+        }
+        &:hover::before{
+            height: 100%;
+        }
+
+        &:hover{
+            i{
+                color: #000;
+            }
+        }
+
+    };
+}
+
+@keyframes changeProject {
+    40%{
+        transform: scale(.1);
+    }
+    50%{
+        transform: scale(.1) rotate(720deg);
+    }
+    100%{
+        transform: scale(1) rotate(720deg);
+    }
+}

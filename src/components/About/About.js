@@ -58,7 +58,7 @@ function About() {
                 Je m'appelle Idris Ben Ahmed, j'ai 19 ans et je suis passionné par le développement web.
             </p>
             <p onMouseOver={mouseOver} onMouseOut={mouseOut}>
-                Après avoir appris seul l'HTML/CSS et le JavaScript pendant 6 mois, j'ai décider de compléter mes compétences avec la formation "Développeur web et web mobile" de l'école O'clock<br/>(6 mois/ 798H), durant laquelle j'ai découvert de nouveux  langages de programmation, de nouvelles architectures et également de nouveaux frameworks, dont React que j'apprécie particulièrement.
+                Après avoir appris seul l'HTML/CSS et le JavaScript pendant 6 mois, j'ai décider de compléter mes compétences avec la formation "Développeur web et web mobile" de l'école O'clock (6 mois/ 798H),<br/> durant laquelle j'ai découvert de nouveux  langages de programmation, de nouvelles architectures et également de nouveaux frameworks, dont React que j'apprécie particulièrement.
             </p>
             <p onMouseOver={mouseOver} onMouseOut={mouseOut}>
                 Je suis aujourd'hui à la recherche d'un poste, idéalement de Front-end mais je suis aussi ouvert au Back-end ou au Full stack, mon but premier étant de prendre de l'expérience.
