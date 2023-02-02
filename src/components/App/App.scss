@@ -30,6 +30,13 @@
             width: 15px;
             border-radius: 0;
         }
+        &.onInput{
+            height: 17px;
+            width: 2px;
+            border-radius: 0;
+            mix-blend-mode: normal;
+            background-color: rgb(28, 22, 56);
+        }
         &.button{
             height: 0;
             width: 0;
@@ -47,6 +54,51 @@
         }
         &.projects{
             background-color: #f6f2e7;
+        }
+
+    }
+    .toContact{
+        z-index: 10000;
+        border: 1px solid #d85353;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        overflow: hidden;
+        
+        i{
+            z-index: 100;
+            color: #d85353;
+        }
+        &::before{
+            position: absolute;
+            display: block;
+            content : "";
+            background-color: #d85353;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: all .25s;
+            bottom: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+        }
+        &:hover::before{
+            height: 100%;
+        }
+
+        &:hover{
+            i{
+                color: #fff;
+            }
         }
 
     }

@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #0f0f0f;
     position: relative;
-    transition: transform .2s;
+    transition: transform .2s, border-radius .2s;
     
     &.changeProject{
         animation: changeProject 2s;
@@ -156,11 +156,14 @@
 @keyframes changeProject {
     40%{
         transform: scale(.1);
+        border-radius: 10rem;
     }
     50%{
         transform: scale(.1) rotate(720deg);
+        border-radius: 10rem;
     }
     100%{
         transform: scale(1) rotate(720deg);
+        border-radius: 0;
     }
 }

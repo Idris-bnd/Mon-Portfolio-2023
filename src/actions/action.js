@@ -57,6 +57,16 @@ export const mouseOutLi = () => ({
   type: MOUSE_OUT_LI,
 });
 
+export const MOUSE_IN_INPUT = 'MOUSE_IN_INPUT';
+export const mouseInInput = () => ({
+  type: MOUSE_IN_INPUT,
+});
+
+export const MOUSE_OUT_INPUT = 'MOUSE_OUT_INPUT';
+export const mouseOutInput = () => ({
+  type: MOUSE_OUT_INPUT,
+});
+
 export const MOUSE_DOWN = 'MOUSE_DOWN';
 export const mouseDown = () => ({
   type: MOUSE_DOWN,
@@ -93,4 +103,30 @@ export const CHANGE_PROJECT = 'CHANGE_PROJECT';
 export const changeProject = (name) => ({
   type: CHANGE_PROJECT,
   name: name,
+});
+
+export const CHANGE_CONTACT_BOOL = 'CHANGE_CONTACT_BOOL';
+export const changeContactBool = (name, bool) => ({
+  type: CHANGE_CONTACT_BOOL,
+  name: name,
+  bool: bool,
+});
+
+export const CHANGE_CONTACT_VALUE = 'CHANGE_CONTACT_VALUE';
+export const changeContactValue = (name, value) => ({
+  type: CHANGE_CONTACT_VALUE,
+  name: name,
+  value: value,
+});
+
+export const RESET_CONTACT_VALUES = 'RESET_CONTACT_VALUES';
+export const resetContactValues = () => ({
+  type: RESET_CONTACT_VALUES,
+});
+
+export const SEND_MAIL = 'SEND_MAIL';
+export const sendMail = (name, value) => ({
+  type: SEND_MAIL,
+  name: name,
+  value: value,
 });

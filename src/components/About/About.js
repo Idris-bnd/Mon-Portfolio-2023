@@ -70,7 +70,7 @@ function About() {
         </div>
 
         <div onMouseOver={mouseOverButton} onMouseOut={mouseOutButtonn} className="buttonDiv">
-        <button onClick={changeLocation}>Projects</button>
+            <button onClick={changeLocation}>Projects</button>
         </div>
     </section>
  )

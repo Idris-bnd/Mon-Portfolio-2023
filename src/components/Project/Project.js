@@ -47,6 +47,9 @@ function Project() {
         dispatch(ToggleProjectsBurger())
     };
     const changeActualProject = (e) => {
+        if (document.querySelector('.Project').classList.contains('changeProject')) {
+            return;
+        }
         document.querySelector('.Project').className = "Project changeProject";
         setTimeout(() => {
             dispatch(changeProject(e.target.id));
@@ -54,7 +57,7 @@ function Project() {
                 document.querySelector('.Project').className = "Project";
             }, 1000)
         }, 1000)
-    }
+    };
 
   return(
     <section className='Project'>

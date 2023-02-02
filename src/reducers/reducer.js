@@ -1,16 +1,21 @@
 import {
+  CHANGE_CONTACT_BOOL,
+  CHANGE_CONTACT_VALUE,
   CHANGE_JOB,
   CHANGE_MOUSE_POSITION,
   CHANGE_PROJECT,
   CLOSE_TRANSITION,
   MOUSE_DOWN,
   MOUSE_IN_BUTTON,
+  MOUSE_IN_INPUT,
   MOUSE_IN_LI,
   MOUSE_IN_TEXT,
   MOUSE_OUT_BUTTON,
+  MOUSE_OUT_INPUT,
   MOUSE_OUT_LI,
   MOUSE_OUT_TEXT,
   MOUSE_UP, MOUSE_URL,
+  RESET_CONTACT_VALUES,
   SET_FIRST_JOB,
   SET_INTERVAL,
   SET_RANDOM_PROJECT,
@@ -32,9 +37,10 @@ export const initialState = {
       onMouseDown: false,
       onButton: false,
       onLi: false,
+      onInput: false,
       url: "",
     },
-    transition: true,
+    transition: false,
   },
   home: {
     devTypes: [
@@ -88,7 +94,28 @@ export const initialState = {
         link: 'https://idris-bnd.github.io/TerminalGame/',
       },
     ]
-  }
+  },
+  contact:{
+    contactBool:{
+      firstName: true,
+      lastName: true,
+      email: true,
+      subject: true,
+      content: true,
+      // --
+      champs: true,
+      notSend: true,
+      cursorLoading: false,
+      send: false,
+    },
+    values:{
+      firstName: '',
+      lastName: '',
+      email: '',
+      subject: '',
+      content: '',
+    }
+  },
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -203,6 +230,28 @@ const reducer = (state = initialState, action = {}) => {
           } 
         }
       };
+      case MOUSE_IN_INPUT:
+      return{
+        ...state,
+        app: {
+          ...state.app,
+          mouse: {
+            ...state.app.mouse,
+            onInput: true,
+          } 
+        }
+      };
+      case MOUSE_OUT_INPUT:
+      return{
+        ...state,
+        app: {
+          ...state.app,
+          mouse: {
+            ...state.app.mouse,
+            onInput: false,
+          } 
+        }
+      };
       case MOUSE_DOWN:
       return{
         ...state,
@@ -288,6 +337,42 @@ const reducer = (state = initialState, action = {}) => {
             actualProject: action.data[0]
           }
         };
+      case CHANGE_CONTACT_BOOL:
+        return{
+            ...state,
+            contact:{
+              ...state.contact,
+              contactBool:{
+                ...state.contact.contactBool,
+                [action.name]: action.bool,
+              }
+            }
+        }; 
+      case CHANGE_CONTACT_VALUE:
+        return{
+            ...state,
+            contact:{
+              ...state.contact,
+              values:{
+                ...state.contact.values,
+                [action.name]: action.value,
+              }
+            }
+        }; 
+      case RESET_CONTACT_VALUES:
+        return{
+          ...state,
+          contact:{
+            ...state.contact,
+            values:{
+              firstName: '',
+              lastName: '',
+              email: '',
+              subject: '',
+              content: '',
+            }
+          }
+        }  
         default:
       return state;
   }

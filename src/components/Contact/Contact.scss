@@ -1,0 +1,190 @@
+.Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(41, 23, 46);
+    min-height: 100vh;
+    font-family: 'Nixie One', cursive;
+
+    h1{
+        margin-top: 1rem;
+        font-size: 5rem;
+        color: #f6f2e7;
+        font-family: 'Ephesis', cursive;
+    }
+
+    .ContactForm{
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+    
+        .inputDiv{
+            display: flex;
+            flex-direction: column;
+            margin-top: 2vh;
+    
+            label{
+                color: #FFFFFF;
+                font-weight: 800;
+                font-style: italic;
+                font-size: 1.2rem;
+                margin-left: 1.5rem;
+                cursor: none;
+                width: fit-content;
+            }
+    
+            input{
+                border-radius: 5px;
+                height: 1.3rem;
+                font-size: 1rem;
+                padding-left: 1rem;
+                font-style: none;
+                outline: none;
+                border: none;
+                color: #C21C40;
+                cursor: none;
+            }
+    
+            p{
+                color: #C21C40;
+                font-size: 1rem;
+                margin: 0;
+                display: none;
+                font-weight: normal;
+    
+                &.false{
+                    display: block;
+                }
+                &.send{
+                    color: #2aca15;
+                    display: block;
+                }
+            }
+    
+            textarea{
+                border-radius: 5px;
+                height: 8rem;
+                font-size: 1rem;
+                padding: 1rem 0 0 1rem;
+                font-style: none;
+                outline: none;
+                border: none;
+                color: #C21C40;
+                resize: none;
+                cursor: none;
+            }
+        }
+    
+        .user{
+            display: flex;
+            justify-content: space-between;
+    
+            .inputDiv{
+                width: 45%;
+            }
+        }
+    
+        &.loading{
+    
+            input, textarea{
+                color: #c0526a;
+                background-color: rgb(204, 204, 204);
+                cursor: none;
+            }
+    
+            button{
+                background-color: #c0526a;
+                cursor: none;
+            }
+        }
+
+        .buttonDiv{
+            border: 1px solid #f6f2e7;
+            margin-top: 1rem;
+            padding: 10px 10px;
+            width: fit-content;
+            margin: 2rem auto;
+            button{
+                padding: .7rem 2.5rem;
+                background-color: transparent;
+                font-family: 'Nixie One', cursive;
+                border: none;
+                outline: none;
+                cursor: none;
+                overflow-y: hidden;
+                position: relative;
+                z-index: 100;
+                color: #f6f2e7;
+                font-size: 1rem;
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content : "Send";
+                    background-color: #f6f2e7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    color: #557c70;
+                    transition: all .25s;
+                    bottom: 0;
+                    left: 0;
+                    height: 0;
+                    width: 100%;
+                    z-index: 0;
+                }
+            }
+            &:hover button::before{
+                height: 100%;
+                opacity: 1;
+            }
+            &.loading button::before{
+                height: 100%;
+                opacity: 1;
+            }
+        }
+    }
+    .backTo{
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        overflow: hidden;
+        
+        i{
+            z-index: 100;
+            color: #f6f2e7;
+        }
+        &::before{
+            position: absolute;
+            display: block;
+            content : "";
+            background-color: #f6f2e7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: all .25s;
+            bottom: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+        }
+        &:hover::before{
+            height: 100%;
+        }
+
+        &:hover{
+            i{
+                color: #000;
+            }
+        }
+
+    };
+}
