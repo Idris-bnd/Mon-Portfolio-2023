@@ -188,3 +188,74 @@
 
     };
 }
+
+@media screen and (max-width : 530px) {
+    .Contact{
+
+        .ContactForm{
+
+            align-items: center;
+            
+            .user{
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                .inputDiv{
+                    width: 80%;
+                }
+            }
+            .inputDiv{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 530px) {
+    .Contact{
+
+        h1{
+            font-size: 3.5rem;
+        }
+        .ContactForm{
+            .user{
+                .inputDiv{
+                    width: 70%;
+                }
+            }
+            .inputDiv{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 380px) {
+    .Contact{
+        .ContactForm{
+            .user{
+                .inputDiv{
+                    width: 60%;
+                }
+            }
+            .inputDiv{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 340px) {
+    .Contact{
+        .ContactForm{
+            .user{
+                .inputDiv{
+                    width: 55%;
+                }
+            }
+            .inputDiv{
+                width: 55%;
+            }
+        }
+    }
+}

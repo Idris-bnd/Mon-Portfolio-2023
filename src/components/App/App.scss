@@ -1,6 +1,7 @@
 .App{
     cursor: none;
     min-height: 100vh;
+    min-width: 100vw;
     &.mouseDown{
         .cursor{
             height: 10px;
@@ -42,6 +43,7 @@
             width: 0;
         }
         &.transition{
+            display: block;
             height: 500vh;
             width: 500vw;
             mix-blend-mode: normal;
@@ -101,5 +103,14 @@
             }
         }
 
+    }
+}
+
+
+@media screen and (max-width : 1000px) {
+    .App{
+        .cursor{
+            display: none;
+        }
     }
 }

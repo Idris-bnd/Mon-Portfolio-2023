@@ -167,3 +167,31 @@
         border-radius: 0;
     }
 }
+
+@media screen and (max-width : 800px) {
+    .Project{
+        .projectList{
+            ul{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 620px) {
+    .Project{
+        padding-bottom: 2rem;
+
+        h1{
+            font-size: 3.5rem;
+        };
+        .paragraphs{
+            width: 70%;
+            font-size: 1rem
+        };
+        .ImgLink{
+            height: 20rem;
+            width: 70%;
+        }
+    }
+}

@@ -132,7 +132,7 @@ function Contact() {
 
             <div className="inputDiv">
                 <label onMouseOver={mouseOver} onMouseOut={mouseOut} htmlFor="content">Message</label>
-                <textarea onMouseOver={mouseOverInput} onMouseOut={mouseOutInputt} onChange={handleChange} name="content" placeholder="Hello Idris, tu nous intéresse beaucoup donc nous te proposons cette magnifique offre d'emploi :)" value={values.content} disabled={contactBool.cursorLoading && true } />
+                <textarea onMouseOver={mouseOverInput} onMouseOut={mouseOutInputt} onChange={handleChange} name="content" placeholder="Hello Idris, t'as l'air super cool! Ducoup nous te proposons cette magnifique offre d'emploi :)" value={values.content} disabled={contactBool.cursorLoading && true } />
                 <p className={!contactBool.content && 'false'}>seulement les lettres, chiffres et cette liste de caractères est autorisé: éèçù?!à,.@"'</p>
                 <p className={!contactBool.champs && 'false'}>Veuillez remplir tout les champs avant d'envoyer le formulaire S.V.P</p>
                 <p className={!contactBool.notSend && 'false'}>L'email n'as pas aboutit, veuillez re essayer ou directement me contacter via l'email ci-dessus.</p>
