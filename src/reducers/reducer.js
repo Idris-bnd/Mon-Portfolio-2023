@@ -65,31 +65,31 @@ export const initialState = {
     projectList : [
       {
         name: 'Blog',
-        description: 'Blog / journal où je donne mon avis sur des sujets divers et variés, pour ce site j\'ai utilisé react, avec ses hooks, props, validation de props et également du scss/sass, <a href=\'https://github.com/Idris-bnd/blog-journal\'>lien</a> vers le répo github et <a href=\'https://blogjournal.web.app/\'>ici</a> vers le site.',
+        description: 'Blog / journal où je donne mon avis sur des sujets divers et variés, pour ce site j\'ai utilisé react, avec ses hooks, props, validation de props et également du scss/sass. Cliquez sur l\'image pour attérir sur le site. Lien du répo github: https://github.com/Idris-bnd/blog-journal',
         img: BlogJournalImg,
         link: 'https://blogjournal.web.app/',
       },
       {
         name: 'Choose',
-        description: 'Site pour générer des couleurs aléatoirement, pour ce site j\'ai utilisé react avec ses props et ses validations et du scss/sass également. le repo est <a href=\'https://github.com/Idris-bnd/Choose\'>ici</a> et le site <a href=\'https://choose-8d461.web.app/\'>ici</a>!',
+        description: 'Site pour générer des couleurs aléatoirement, pour ce site j\'ai utilisé react avec ses props et ses validations et du scss/sass. Cliquez sur l\'image pour attérir sur le site. Lien du répo github: https://github.com/Idris-bnd/Choose',
         img: ChooseImg,
         link: 'https://choose-8d461.web.app/',
       },
       {
         name: 'Mon Portfolio',
-        description: 'Mon portfolio tout bien tout sympa',
+        description: 'Mon portfolio, site sur lequel vous vous trouvez actuellement, réalisé avec React/Redux et responsive, vous y trouverez quelques projets personnels/ en équipe.',
         img: Portfolio,
         link: '',
       },
       {
         name: 'Dance Riser',
-        description: 'Dans une équipe de 4 développeurs, on a crée from scratch un site visant à gérer les relations professeurs/élèves d\'écoles de dances.',
+        description: 'Dans une équipe de 4 développeurs, on a crée from scratch un site visant à gérer les relations professeurs/élèves d\'écoles de dances. Pour l\'application front on s\'est servis de React/Redux, scss et le plus important: axios pour communiquer en API REST avec l\'application back-end réalisé en Symfony/Doctrine. Cliquez sur l\'image pour attérir sur le site.',
         img: DanceRiserImg,
         link: 'https://www.dance-riser.com/',
       },
       {
         name: 'TerminalGame',
-        description: 'Petit jeu sur un site effet \'terminal\' pour montrer mes compétences sur du Javascript vanilla, en utilisant les modèles, <a href=\'https://github.com/Idris-bnd/TerminalGame\'>lien</a> vers le répo github et <a href=\'https://idris-bnd.github.io/TerminalGame/\'>ici</a> vers le site',
+        description: 'Petit jeu sur un site effet \'terminal\' pour montrer mes compétences sur du Javascript vanilla, en utilisant les modèles. Cliquez sur l\'image pour attérir sur le site. Lien du répo github: https://github.com/Idris-bnd/TerminalGame',
         img: TerminalGameImg,
         link: 'https://idris-bnd.github.io/TerminalGame/',
       },
