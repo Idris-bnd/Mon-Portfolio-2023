@@ -79,7 +79,7 @@ export const initialState = {
         name: 'Mon Portfolio',
         description: 'Mon portfolio, site sur lequel vous vous trouvez actuellement, réalisé avec React/Redux et responsive, vous y trouverez quelques projets personnels/ en équipe.',
         img: Portfolio,
-        link: '',
+        link: 'https://idris-portfolio-8228d.web.app/',
       },
       {
         name: 'Dance Riser',
