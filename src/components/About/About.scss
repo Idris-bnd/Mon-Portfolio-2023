@@ -3,9 +3,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #162923;
+    background-color: #090D18;
     position: relative;
-
+    
     h1{
         margin-top: 1rem;
         font-size: 5rem;
@@ -46,7 +46,7 @@
                 justify-content: center;
                 align-items: center;
                 opacity: 0;
-                color: #557c70;
+                color: #090D18;
                 transition: all .25s;
                 bottom: 0;
                 left: 0;
@@ -62,7 +62,6 @@
     }
 
     .backTo{
-        // border: 1px solid #f6f2e7;
         border-radius: 50%;
         height: 2rem;
         width: 2rem;
@@ -100,7 +99,7 @@
 
         &:hover{
             i{
-                color: #000;
+                color: #090D18;
             }
         }
 

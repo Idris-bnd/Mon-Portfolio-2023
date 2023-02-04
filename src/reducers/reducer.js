@@ -77,7 +77,7 @@ export const initialState = {
       },
       {
         name: 'Mon Portfolio',
-        description: 'Mon portfolio, site sur lequel vous vous trouvez actuellement, réalisé avec React/Redux et responsive, vous y trouverez quelques projets personnels/ en équipe.',
+        description: 'Mon portfolio, site sur lequel vous vous trouvez actuellement, réalisé avec React/Redux et responsive, vous y trouverez quelques projets personnels/ en équipe. Lien du répo github: https://github.com/Idris-bnd/Mon-Portfolio-2023',
         img: Portfolio,
         link: 'https://idris-portfolio-8228d.web.app/',
       },
@@ -149,7 +149,8 @@ const reducer = (state = initialState, action = {}) => {
             ...state.home.devType,
             value: state.home.devTypes[index],
             index: index
-          } 
+          },
+          interval: true,
         }
       };
       case CHANGE_MOUSE_POSITION:

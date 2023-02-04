@@ -14,15 +14,18 @@ function Home() {
   useEffect(() => {
     dispatch(setFirstJob());
     dispatch(mouseURL(window.location.pathname.substring(1)));
-    setInterval(() => {
-      document.querySelector('.Home h2 span').className = 'remove';
-      setTimeout(() => {
-        dispatch(changeJob());
+    if (interval) {
+      return;
+    }
+      setInterval(() => {
+        document.querySelector('.Home h2 span').className = 'remove';
         setTimeout(() => {
-          document.querySelector('.Home h2 span').className = '';
+          dispatch(changeJob());
+          setTimeout(() => {
+            document.querySelector('.Home h2 span').className = '';
+          }, 200)
         }, 200)
-      }, 200)
-    }, 2700)
+      }, 2700)
   }, [devTypes]);
   const mouseOver = () => {
     dispatch(mouseInText())

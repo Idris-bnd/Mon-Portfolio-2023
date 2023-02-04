@@ -16,11 +16,11 @@
         left: -100px;
         top: 50%;
         mix-blend-mode: difference;
-        background-color: #fff;
+        background-color: #f6f2e7;
         z-index: 10000;
         height: 20px;
         width: 20px;
-        transition: height .3s, width .1s, border-radius .2s;
+        transition: height .3s, width .1s, border-radius .2s, background-color .2s;
         
         &.text{
             height: 30px;
@@ -47,21 +47,12 @@
             height: 500vh;
             width: 500vw;
             mix-blend-mode: normal;
-            background-color: #fff;
+            background-color: #090D18;
         }
-
-        // pages
-        &.about{
-            background-color: #fff;
-        }
-        &.projects{
-            background-color: #fff;
-        }
-
     }
     .toContact{
         z-index: 10000;
-        border: 1px solid #d85353;
+        border: 1px solid #ff0037;
         border-radius: 50%;
         height: 2rem;
         width: 2rem;
@@ -76,13 +67,13 @@
         
         i{
             z-index: 100;
-            color: #d85353;
+            color: #ff0037;
         }
         &::before{
             position: absolute;
             display: block;
             content : "";
-            background-color: #d85353;
+            background-color: #ff0037;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,7 +90,7 @@
 
         &:hover{
             i{
-                color: #fff;
+                color: #f6f2e7;
             }
         }
 

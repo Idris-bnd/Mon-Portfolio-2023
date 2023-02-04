@@ -55,7 +55,7 @@ function App() {
 
   return(
     <section onMouseDown={mouseDown} onMouseUp={mouseUp}  onMouseMove={mouseMove} className={`App ${onMouseDown && ' mouseDown'}`}>
-        <div style={{ top: X, left: Y}} id='cursor' className={`cursor ${mouseUrl} ${ onButton && " button "} ${ onInput && " onInput "} ${transition && ' transition '} ${ onText && " text "} ${ onLi && " onLi"}`} />
+        <div style={{ top: X, left: Y}} id='cursor' className={`cursor  ${transition && ' transition '} ${mouseUrl} ${ onButton && " button "} ${ onInput && " onInput "} ${ onText && " text "} ${ onLi && " onLi"}`} />
 
         <div onClick={changeLocation} onMouseOver={mouseOverButton} onMouseOut={mouseOutButtonn} className="toContact">
             <i className="fa-solid fa-envelope" />

@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f0f0f;
+    background-color: #090D18;
     position: relative;
     transition: transform .2s, border-radius .2s;
     
@@ -146,7 +146,7 @@
 
         &:hover{
             i{
-                color: #000;
+                color: #090D18;
             }
         }
 

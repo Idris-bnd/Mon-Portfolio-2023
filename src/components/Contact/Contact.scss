@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(41, 23, 46);
+    background-color: #090D18;
     min-height: 100vh;
     font-family: 'Nixie One', cursive;
 
@@ -24,7 +24,7 @@
             margin-top: 2vh;
     
             label{
-                color: #FFFFFF;
+                color: #f6f2e7;
                 font-weight: 800;
                 font-style: italic;
                 font-size: 1.2rem;
@@ -41,12 +41,13 @@
                 font-style: none;
                 outline: none;
                 border: none;
-                color: #C21C40;
+                color: #090D18;
+                background-color: #f6f2e7;
                 cursor: none;
             }
     
             p{
-                color: #C21C40;
+                color: #ff0037;
                 font-size: 1rem;
                 margin: 0;
                 display: none;
@@ -69,7 +70,8 @@
                 font-style: none;
                 outline: none;
                 border: none;
-                color: #C21C40;
+                color: #090D18;
+                background-color: #f6f2e7;
                 resize: none;
                 cursor: none;
             }
