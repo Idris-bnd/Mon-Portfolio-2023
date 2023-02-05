@@ -130,3 +130,9 @@ export const sendMail = (name, value) => ({
   name: name,
   value: value,
 });
+
+
+export const RESET_CURSOR = 'RESET_CURSOR';
+export const resetCursor = () => ({
+  type: RESET_CURSOR,
+});

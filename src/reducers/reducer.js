@@ -16,6 +16,7 @@ import {
   MOUSE_OUT_TEXT,
   MOUSE_UP, MOUSE_URL,
   RESET_CONTACT_VALUES,
+  RESET_CURSOR,
   SET_FIRST_JOB,
   SET_INTERVAL,
   SET_RANDOM_PROJECT,
@@ -373,7 +374,22 @@ const reducer = (state = initialState, action = {}) => {
               content: '',
             }
           }
-        }  
+        };
+      case RESET_CURSOR:
+        return{
+          ...state,
+          app: {
+            ...state.app,
+            mouse: {
+              ...state.app.mouse,
+              onText: false,
+              onMouseDown: false,
+              onButton: false,
+              onLi: false,
+              onInput: false,
+            } 
+          }
+        };
         default:
       return state;
   }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import { changeMousePosition, closeTransition, mouseInButton, mouseOutButton, setTransition } from '../../actions/action';
+import { changeMousePosition, closeTransition, mouseInButton, mouseOutButton, resetCursor, setTransition } from '../../actions/action';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 import Home from '../Home/Home';
@@ -11,7 +11,6 @@ import './App.scss';
 function App() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const mouse = useSelector((state) => state.portfolio.app.mouse)
     const X = useSelector((state) =>  state.portfolio.app.mouse.positionX)
     const Y = useSelector((state) =>  state.portfolio.app.mouse.positionY)    
     const onText = useSelector((state) =>  state.portfolio.app.mouse.onText)

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { closeTransition, mouseInButton, mouseInText, mouseOutButton, mouseOutText, mouseURL, setTransition } from '../../actions/action';
+import { closeTransition, mouseInButton, mouseInText, mouseOutButton, mouseOutText, mouseURL, resetCursor, setTransition } from '../../actions/action';
 import './About.scss';
 
 
@@ -9,6 +9,7 @@ function About() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     useEffect(() => {
+        dispatch(resetCursor());
         dispatch(mouseURL(window.location.pathname.substring(1)));
     }, []);
     const mouseOver = () => {

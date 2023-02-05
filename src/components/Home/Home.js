@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { changeJob, closeTransition, mouseInButton, mouseInText, mouseOutButton, mouseOutText, mouseURL, setFirstJob, setTransition } from '../../actions/action';
+import { changeJob, closeTransition, mouseInButton, mouseInText, mouseOutButton, mouseOutText, mouseURL, resetCursor, setFirstJob, setTransition } from '../../actions/action';
 import './Home.scss';
 
 
@@ -13,6 +13,7 @@ function Home() {
   const interval = useSelector((state) => state.portfolio.home.interval)
   useEffect(() => {
     dispatch(setFirstJob());
+    dispatch(resetCursor());
     dispatch(mouseURL(window.location.pathname.substring(1)));
     if (interval) {
       return;

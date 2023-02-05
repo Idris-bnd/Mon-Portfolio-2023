@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { changeContactBool, changeContactValue, closeTransition, mouseInButton, mouseInInput, mouseInText, mouseOutButton, mouseOutInput, mouseOutText, mouseURL, sendMail, setTransition } from '../../actions/action';
+import { changeContactBool, changeContactValue, closeTransition, mouseInButton, mouseInInput, mouseInText, mouseOutButton, mouseOutInput, mouseOutText, mouseURL, resetCursor, sendMail, setTransition } from '../../actions/action';
 import './Contact.scss';
 
 
@@ -11,6 +11,7 @@ function Contact() {
     const values = useSelector((state) => state.portfolio.contact.values);
     const contactBool = useSelector((state) => state.portfolio.contact.contactBool);
     useEffect(() => {
+        dispatch(resetCursor());
         dispatch(mouseURL(window.location.pathname.substring(1)));
     }, []);
     const mouseOver = () => {

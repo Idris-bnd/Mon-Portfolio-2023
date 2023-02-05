@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { changeProject, closeTransition, mouseInButton, mouseInLi, mouseInText, mouseOutButton, mouseOutLi, mouseOutText, mouseURL, setRandomProject, setTransition, ToggleProjectsBurger } from '../../actions/action';
+import { changeProject, closeTransition, mouseInButton, mouseInLi, mouseInText, mouseOutButton, mouseOutLi, mouseOutText, mouseURL, resetCursor, setRandomProject, setTransition, ToggleProjectsBurger } from '../../actions/action';
 import './Project.scss';
 
 
@@ -12,6 +12,7 @@ function Project() {
     const actualProject = useSelector((state) => state.portfolio.projects.actualProject);
     const burgerMenu = useSelector((state) => state.portfolio.projects.burgerMenu);
     useEffect(() => {
+        dispatch(resetCursor());
         dispatch(mouseURL(window.location.pathname.substring(1)));
         dispatch(setRandomProject());
     }, []);
