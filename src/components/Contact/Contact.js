@@ -42,6 +42,24 @@ function Contact() {
         }, 500)
     };
     const handleChange = (e) => {
+        if (e.target.name === "firstName" || e.target.name === "lastName") {
+            if (!e.target.value.charAt(e.target.value.length-1).match(/^[a-zA-Z\s]+$/)) {
+                dispatch(changeContactValue(e.target.name, e.target.value.substr(0, e.target.value.length -1)));
+                return;
+            };
+        }
+        if (e.target.name === "subject") {
+            if (!e.target.value.charAt(e.target.value.length-1).match(/^[\w.'\séèçù?!à]+$/)) {
+                dispatch(changeContactValue(e.target.name, e.target.value.substr(0, e.target.value.length -1)));
+                return;
+            };
+        }
+        if (e.target.name === "content") {
+            if (!e.target.value.charAt(e.target.value.length-1).match(/^[\w.'"\séèçù?!à@,]+$/)) {
+                dispatch(changeContactValue(e.target.name, e.target.value.substr(0, e.target.value.length -1)));
+                return;
+            };
+        }
         dispatch(changeContactValue(e.target.name, e.target.value))
     };
     const handleSubmit = (e) => {
